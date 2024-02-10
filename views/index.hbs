@@ -4,7 +4,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="/">Laija<span>.</span></a>
+				<a class="navbar-brand" href="/"><img src="{{logo}}" alt="Laija Logo"style="width: 45px; height: 60px;"></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -45,21 +45,23 @@
 								<!-- <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p> -->
 								<p><a href="/shop" class="btn btn-secondary me-2">Shop Now</a><!-- <a href="#" class="btn btn-white-outline">Explore</a></p> -->
 							</div>
+							
 						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<!-- TODO <img src="images/couch.png" class="img-fluid"> -->
+						<div class="col-lg-5">
+							<div class="img-fluid">
+								<img src="{{pic4}}" class="img-fluid">
 							</div>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		<!-- End Hero Section -->
 
 		<!-- Start Product Section -->
 		<div class="product-section">
 			<div class="container">
-				<div class="row">
+				<div class="row ">
 
 					<!-- Start Column 1 -->
 					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
@@ -88,7 +90,7 @@
 						<a class="product-item" href="/shop">
 							<img src="{{pic2}}" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Mariposa (Silver)</h3>
-							<strong class="product-price">Php 599</strong>
+							<strong class="product-price">Php 699</strong>
 
 							<!-- <span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -397,10 +399,13 @@
 
 							<form action="/storeEmail" method="POST" class="row g-3">
 								<div class="col-auto">
-									<input type="text" class="form-control" name="name" placeholder="Enter your name">
+									<input type="text" class="form-control" name="name" placeholder="first name">
 								</div>
 								<div class="col-auto">
-									<input type="email" class="form-control" name="email" placeholder="Enter your email">
+									<input type="text" class="form-control" name="surname" placeholder="last name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" name="email" placeholder="email">
 								</div>
 								<div class="col-auto">
 									<button type="submit" class="btn btn-primary">
@@ -469,7 +474,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright by laijatheladies@gmail.com &copy;<script>document.write(new Date().getFullYear());</script> 
+							<p class="mb-2 text-center text-lg-start">laija by the ladies co. &copy;<script>document.write(new Date().getFullYear());</script> 
             </p>
 						</div>
 

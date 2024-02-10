@@ -6,7 +6,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="/">Laija<span>.</span></a>
+				<a class="navbar-brand" href="/"><img src="{{logo}}" alt="Laija Logo"style="width: 45px; height: 60px;"></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@
 						<a class="product-item" href="/shop">
 							<img src="{{pic3}}" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Mariposa (Silver)</h3>
-							<strong class="product-price">Php 599</strong>
+							<strong class="product-price">Php 699</strong>
 
 							<!-- <span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -133,7 +133,7 @@
 						<a class="product-item" href="/shop">
 							<img src="{{pic6}}" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Rosa (Silver)</h3>
-							<strong class="product-price">Php 599</strong>
+							<strong class="product-price">Php 699</strong>
 
 							<!-- <span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
@@ -319,10 +319,13 @@
 
 							<form action="/storeEmail" method="POST" class="row g-3">
 								<div class="col-auto">
-									<input type="text" class="form-control" name="name" placeholder="Enter your name">
+									<input type="text" class="form-control" name="name" placeholder="first name">
 								</div>
 								<div class="col-auto">
-									<input type="email" class="form-control" name="email" placeholder="Enter your email">
+									<input type="text" class="form-control" name="surname" placeholder="last name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" name="email" placeholder="email">
 								</div>
 								<div class="col-auto">
 									<button type="submit" class="btn btn-primary">
@@ -391,7 +394,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright by laijatheladies@gmail.com &copy;<script>document.write(new Date().getFullYear());</script> 
+							<p class="mb-2 text-center text-lg-start">laija by the ladies co. &copy;<script>document.write(new Date().getFullYear());</script> 
             </p>
 						</div>
 

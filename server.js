@@ -4,6 +4,11 @@ const exphbs = require("express-handlebars");
 const app = express();
 const path = require("path");
 
+
+// Get the content from the .env file
+require('dotenv').config()
+
+
 // ---------- Dependencies #1 ---------- //
 
 // ---------- Dependencies #2 ---------- //
@@ -11,10 +16,7 @@ const bodyParser = require("body-parser");
 const { google } = require("googleapis");
 const sheetId = process.env.SHEET_ID;
 const tabName = 'Sheet1';
-const range = 'A:B';
-
-// Get the content from the .env file
-require("dotenv").config();
+const range = 'A:C';
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -82,10 +84,10 @@ async function writeGoogleSheet(
 
 
 // Call the function to store Email in Google Sheet using Google API
-async function storeEmail(name, email) {
+async function storeEmail(name, surname, email) {
   try {
     let client = await getGoogleSheetClient();
-    let data = [[name, email]];
+    let data = [[name, surname, email]];
     await writeGoogleSheet(client, sheetId, tabName, range, data);
   } catch (error) {
     console.error("Error while storing email in google sheet:", error);
@@ -109,7 +111,9 @@ app.get("/", (req, res) => {
     pic1: "static/assets/RG-Clover-Premium.jpg",
     pic2: "static/assets/silverbutterfly.jpg",
     pic3: "static/assets/goldrose.jpg",
+    pic4: "static/assets/PR_Silver_Gem.jpg",
     emailpic: "static/assets/envelope-outline.svg",
+    logo: "static/assets/laija_logo.png",
     });
 });
 
@@ -124,7 +128,8 @@ app.get("/about", (req, res) => {
       css2: "static/css/tiny-slider.css",
       css3: "static/css/style.css",
       emailpic: "static/assets/envelope-outline.svg",
-      grouppic: "static/assets/grouppic.jpg"
+      grouppic: "static/assets/grouppic.jpg",
+      logo: "static/assets/laija_logo.png",
     });
   });
 
@@ -155,13 +160,14 @@ app.get("/about", (req, res) => {
       pic15: "static/assets/charms.jpg",
       pic16: "static/assets/charms.jpg",
       emailpic: "static/assets/envelope-outline.svg",
+      logo: "static/assets/laija_logo.png",
     });
   });
 
 app.post("/storeEmail", (req, res) => {
-  let { name, email } = req.body;
+  let { name, surname, email } = req.body;
   // Assuming storeEmail is defined elsewhere and returns a promise
-  storeEmail(name, email)
+  storeEmail(name, surname, email)
     .then(() => {
       res.redirect("/");
     })

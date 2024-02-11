@@ -154,7 +154,7 @@ app.get("/about", (req, res) => {
       pic9: "static/assets/Amor.JPG",
       pic10: "static/assets/Sinta.JPG",
       pic11: "static/assets/pads.jpg",
-      pic12: "static/assets/pads.jpg",
+      pic12: "static/assets/pads2.jpg",
       pic13: "static/assets/charms.jpg",
       pic14: "static/assets/charms.jpg",
       pic15: "static/assets/charms.jpg",
